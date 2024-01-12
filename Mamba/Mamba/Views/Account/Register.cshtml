@@ -1,0 +1,61 @@
+﻿@using Mamba.Utilities.Enums;
+@using Mamba.ViewModels;
+@model RegisterVM
+
+<div class="card-body">
+    <h4 class="card-title">Register</h4>
+    
+    <form class="forms-sample" method="post" >
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" id="exampleInputName1" placeholder="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Surname">Surname</label>
+            <input asp-for="Surname" class="form-control" id="exampleInputName1" placeholder="Surname">
+            <span asp-validation-for="Surname"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserName">UserName</label>
+            <input asp-for="UserName" class="form-control" id="exampleInputName1" placeholder="UserName">
+            <span asp-validation-for="UserName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" id="exampleInputName1" placeholder="Email">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" id="exampleInputName1" placeholder="Password">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CinfirmPassword">CinfirmPassword</label>
+            <input asp-for="CinfirmPassword" class="form-control" id="exampleInputName1" placeholder="CinfirmPassword">
+            <span asp-validation-for="CinfirmPassword"></span>
+        </div>
+        
+        <div class="col-md-6">
+
+            <label asp-for="Gender"></label>
+            @foreach (var item in Html.GetEnumSelectList<Gender>())
+            {
+                <div class="d-flex form-check">
+                    <label asp-for="Gender" class="from-cheeck-label" for="@item.Value">@item.Text</label>
+                    <input asp-for="Gender" id="@item.Value" class="from-cheeck-input" type="radio" value="@item.Text" />
+                </div>
+
+            }
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+
+        <button class="btn btn-primary me-2">Register</button>
+        <button class="btn btn-light">Cancel</button>
+    </form>
+    
+
+</div>
