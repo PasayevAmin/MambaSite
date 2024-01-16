@@ -15,7 +15,7 @@ namespace Mamba.Utilities.Extentions
         }
         public static bool CheckSize(this IFormFile file, int mb)
         {
-            if (file.Length>1024*1024*mb)
+            if (file.Length<1024*1024*mb)
             {
                 return true;
             }

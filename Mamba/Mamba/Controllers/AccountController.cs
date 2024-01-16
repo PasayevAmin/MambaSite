@@ -62,7 +62,7 @@ namespace Mamba.Controllers
                 }
                 return View();
             }
-            //await _userManager.AddToRoleAsync(appUser,UserRole.Member.ToString());
+            await _userManager.AddToRoleAsync(appUser, UserRole.Member.ToString());
             await _signInManage.SignInAsync(appUser, false);
             return RedirectToAction("Index","Home");
         }
@@ -108,5 +108,18 @@ namespace Mamba.Controllers
 
 
         }
+        public async Task<IActionResult> CreateRole()
+        {
+            foreach (var item in Enum.GetValues(typeof(UserRole)))
+            {
+                if (!await _roleManager.RoleExistsAsync(item.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = item.ToString() });
+                }
+            }
+            return RedirectToAction("Index", "Home", new {Area=""});
+
+        }
+
     }
 }

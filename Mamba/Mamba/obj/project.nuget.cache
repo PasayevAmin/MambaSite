@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m9tGq36wZgN3kYVFJXwHvLRcrjXjVZ2urnnwYiWJd7yLnjlNYnJSEehVpLyop+ivfpPw3sM6fGXvFh0n50U8PA==",
+  "dgSpecHash": "7jXbGv8rxs59+KqFsDTXf7XeN+gqtREYawsiNS9CG0arROtW3G9Nj7RVega35rUAneSYoAcUfuphRDXFpVDUlQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\source\\repos\\Mamba\\Mamba\\Mamba.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\OneDrive\\İş masası\\MambaSite\\Mamba\\Mamba\\Mamba.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

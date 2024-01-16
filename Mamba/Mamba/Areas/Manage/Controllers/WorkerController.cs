@@ -26,7 +26,7 @@ namespace Mamba.Areas.Manage.Controllers
             List<Worker> workers = await _context.Workers.Skip((page - 1) * take).Take(take).ToListAsync();
             PaginationVM<Worker> pagination = new PaginationVM<Worker>
             {
-                TotalPage = Math.Ceiling((double)count / 4),
+                TotalPage = Math.Ceiling((double)count / take),
                 CurrentPage = page,
                 items = workers
 
